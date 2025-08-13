@@ -58,12 +58,12 @@ const PowerIndicator = GObject.registerClass(
             let hours = 0;
             let time_str = "";
 
-            if (status.toLowerCase().startsWith("dis")) {
+            if (status == "Discharging") {
                 power_W = -power_W;
-                hours = charge_now_uAh / Math.abs(current_uA);
-            } else if (status.lower().startswith("char")) {
-                remain_uAh = charge_full_uAh - charge_now_uAh;
-                hours = remain_uAh / Math.abs(current_uA);
+                hours = charge_now_uAh / current_uA;
+            } else if (status == "Charging") {
+                let remain_uAh = charge_full_uAh - charge_now_uAh;
+                hours = remain_uAh / current_uA;
             }
 
             if (hours > 0) {
