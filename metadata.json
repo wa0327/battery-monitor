@@ -1,0 +1,7 @@
+{
+    "uuid": "battery-monitor",
+    "name": "Battery Monitor",
+    "description": "Shows BAT1 power and time left.",
+    "version": 1,
+    "shell-version": ["48"]
+}
