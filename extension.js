@@ -72,7 +72,7 @@ const PowerIndicator = GObject.registerClass(
                 time_str = `${h}:${m.toString().padStart(2, "0")}`;
                 this._label.text = `${power_W.toFixed(2)}W | ${time_str}`;
             } else {
-                this._label.text = '-'
+                this._label.text = '--'
             }
         }
 
